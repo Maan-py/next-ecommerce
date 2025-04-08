@@ -44,7 +44,7 @@ export async function SignIn(_: unknown, formData: FormData): Promise<ActionResu
   }
 
   const session = await lucia.createSession(existingUser.id, {});
-  const sessionCookie = await lucia.createSessionCookie(session.id);
+  const sessionCookie = lucia.createSessionCookie(session.id);
 
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
