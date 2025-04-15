@@ -76,7 +76,7 @@ export async function deleteCategory(_: unknown, formData: FormData, id: number)
   } catch (error) {
     console.log(error);
     return {
-      error: "Failed to update data",
+      error: "Failed to delete data",
     };
   }
   return redirect("/dashboard/categories");

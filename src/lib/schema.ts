@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+export const ALLOW_MIME_TYPES = ["image/jpg", "image/jpeg", "image/png"];
+
 export const schemaSignIn = z.object({
   email: z
     .string({
@@ -34,5 +36,16 @@ export const schemaLocation = z.object({
     })
     .min(4, {
       message: "Name should have min 4 characters",
+    }),
+});
+
+export const schemaBrand = schemaCategory.extend({
+  image: z
+    .any()
+    .refine((file: File) => ALLOW_MIME_TYPES.includes(file.type), {
+      message: "File is not valid",
+    })
+    .refine((file: File) => file?.name, {
+      message: "Image is required",
     }),
 });
