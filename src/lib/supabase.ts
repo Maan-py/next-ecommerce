@@ -25,7 +25,5 @@ export const uploadFile = async (file: File, path: "brands" | "products" = "bran
 };
 
 export const deleteFile = async (filename: string, path: "brands" | "products" = "brands") => {
-  const { data, error } = await supabase.storage.from("belanja").remove([`/public/${path}/${filename}`]);
-
-  console.log(data, "berhasil dihapus, error:", error);
+  await supabase.storage.from("belanja").remove([`public/${path}/${filename}`]);
 };
