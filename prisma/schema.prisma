@@ -116,7 +116,6 @@ model Order {
   updated_at DateTime @updatedAt
 
   detail OrderDetail?
-
   orders OrderProduct[]
 }
 

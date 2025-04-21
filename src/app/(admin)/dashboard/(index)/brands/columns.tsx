@@ -18,9 +18,9 @@ export const columns: ColumnDef<Brand>[] = [
       console.log(brand.logo);
 
       return (
-        <div className="flex items-center">
+        <div className="inline-flex items-center gap-5">
           <Image src={getImageUrl(brand.logo)} alt={`${brand.name}`} width={80} height={80} />
-          <span className="ml-6">{brand.name}</span>
+          <span>{brand.name}</span>
         </div>
       );
     },
