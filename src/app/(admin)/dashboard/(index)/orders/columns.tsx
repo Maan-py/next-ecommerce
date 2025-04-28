@@ -25,7 +25,6 @@ export const columns: ColumnDef<TColumn>[] = [
     header: "Products",
     cell: ({ row }) => {
       const order = row.original;
-
       return (
         <div className="flex flex-col gap-4 justify-start">
           {order.products.map((item, index) => (
