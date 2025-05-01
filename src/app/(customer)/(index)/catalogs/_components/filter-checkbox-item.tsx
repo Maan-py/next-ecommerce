@@ -11,7 +11,6 @@ interface FilterCheckBoxItemProps {
 
 export default function FilterCheckBoxItem({ id, value, type }: FilterCheckBoxItemProps) {
   const { filter, setFilter } = useFilter();
-  console.log("filter", filter);
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
     switch (type) {
