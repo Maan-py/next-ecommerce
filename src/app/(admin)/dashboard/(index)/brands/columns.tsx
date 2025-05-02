@@ -15,7 +15,6 @@ export const columns: ColumnDef<Brand>[] = [
     header: "Brand",
     cell: ({ row }) => {
       const brand = row.original;
-      console.log(brand.logo);
 
       return (
         <div className="inline-flex items-center gap-5">

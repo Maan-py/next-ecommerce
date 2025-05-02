@@ -5,7 +5,8 @@ import { getBrandById } from "../../lib/data";
 import { redirect } from "next/navigation";
 
 export default async function EditPage({ params }: Tedit) {
-  const brand = await getBrandById(params.id);
+  const { id }: { id: string } = await params;
+  const brand = await getBrandById(id);
 
   if (!brand) {
     return redirect("/dashboard/brands");

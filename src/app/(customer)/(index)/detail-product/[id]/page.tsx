@@ -14,7 +14,8 @@ interface DetailProductProp {
 
 export default async function DetailProductPage({ params }: DetailProductProp) {
   const { session } = await getUser();
-  const product = await getProductById(Number.parseInt(params.id));
+  const { id }: { id: string } = await params;
+  const product = await getProductById(Number.parseInt(id));
 
   if (!product) {
     return redirect("/");

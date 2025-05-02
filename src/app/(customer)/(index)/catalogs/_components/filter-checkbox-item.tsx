@@ -49,9 +49,6 @@ export default function FilterCheckBoxItem({ id, value, type }: FilterCheckBoxIt
         break;
       case "location":
         if (e.target.checked) {
-          console.log("location:", e.target.value);
-          console.log("parsed location:", Number.parseInt(e.target.value));
-
           setFilter({
             locations: [...(filter?.locations ?? []), Number.parseInt(e.target.value)],
           });

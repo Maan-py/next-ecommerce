@@ -25,7 +25,7 @@ export default async function BrandPage() {
           <CardDescription>Manage your brands and view their sales performance.</CardDescription>
         </CardHeader>
         <CardContent>
-          <DataTable columns={columns} data={brands}></DataTable>
+          <DataTable columns={columns} data={brands ?? []}></DataTable>
         </CardContent>
       </Card>
     </div>

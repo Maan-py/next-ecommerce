@@ -10,7 +10,8 @@ import { getProductById } from "../../lib/data";
 import { redirect } from "next/navigation";
 
 export default async function EditPage({ params }: Tedit) {
-  const product = await getProductById(Number(params.id));
+  const { id }: { id: string } = await params;
+  const product = await getProductById(Number(id));
   const brands = await getBrands();
   const categories = await getCategories();
   const locations = await getLocations();

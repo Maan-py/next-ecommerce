@@ -2,13 +2,16 @@ export type ActionResult = {
   error: string;
 };
 
-export type Tparams = {
-  id: string;
-};
+// export type Tparams = {
+//   id: string;
+// };
+export type Tparams = Promise<{ id: string }>;
 
 export type Tedit = {
   params: Tparams;
 };
+
+
 
 export type TProduct = {
   id: number;

@@ -119,3 +119,44 @@ export const schemaProductEdit = schemaProduct
   .omit({
     images: true,
   });
+
+export const schemaShippingAddress = z.object({
+  name: z
+    .string({
+      required_error: "Name is required",
+    })
+    .min(5, {
+      message: "Name should have 5 minimal characters",
+    }),
+  address: z
+    .string({
+      required_error: "Address is required",
+    })
+    .min(5, {
+      message: "Address should have 5 minimal characters",
+    }),
+  city: z
+    .string({
+      required_error: "City is required",
+    })
+    .min(5, {
+      message: "City should have 5 minimal characters",
+    }),
+  postal_code: z
+    .string({
+      required_error: "Postal code is required",
+    })
+    .min(5, {
+      message: "Postal code should have 5 minimal characters",
+    }),
+  note: z.string().min(5, {
+    message: "Note should have 5 minimal characters",
+  }),
+  phone: z
+    .string({
+      required_error: "Phone number is required",
+    })
+    .min(5, {
+      message: "Phone number should have 5 minimal characters",
+    }),
+});

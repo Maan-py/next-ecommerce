@@ -66,7 +66,7 @@ export default function PriceInfo({ item, isLogin }: PriceInfoProp) {
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <button type="button" disabled={!isLogin} onClick={checkout} className="p-[12px_24px] bg-[#0D5CD7] rounded-full text-center font-semibold text-white disabled:opacity-60">
+          <button type="button" disabled={!isLogin} onClick={checkout} className="p-[12px_24px] bg-[#0D5CD7] rounded-full text-center font-semibold text-white disabled:opacity-60 cursor-pointer">
             Add to Cart
           </button>
           <a href="" className="p-[12px_24px] bg-white rounded-full text-center font-semibold border border-[#E5E5E5]">

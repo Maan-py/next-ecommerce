@@ -13,8 +13,6 @@ export async function signIn(_: unknown, formData: FormData): Promise<ActionResu
     password: formData.get("password"),
   });
 
-  console.log(validate);
-
   if (!validate.success) {
     return {
       error: validate.error.errors[0].message,

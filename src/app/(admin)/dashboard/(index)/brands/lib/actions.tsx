@@ -38,8 +38,6 @@ export async function postBrand(_: unknown, formData: FormData): Promise<ActionR
 }
 
 export async function updateBrand(_: unknown, formData: FormData, id: number | undefined): Promise<ActionResult> {
-  console.log(formData.get("image"));
-
   const fileUpload = formData.get("image") as File;
 
   const validate = schemaBrand
