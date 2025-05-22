@@ -22,11 +22,11 @@ export default function ProductsListing() {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-[30px]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
       {/* <a href="details.html" className="product-card">
         <div className="bg-white flex flex-col gap-[24px] p-5 rounded-[20px] ring-1 ring-[#E5E5E5] hover:ring-2 hover:ring-[#FFC736] transition-all duration-300 w-full">
           <div className="w-full h-[90px] flex shrink-0 items-center justify-center overflow-hidden">
-            <img src="assets/thumbnails/color_back_green__buxxfjccqjzm_large_2x-Photoroom 1.png" className="w-full h-full object-contain" alt="thumbnail" />
+            <img src="/assets/thumbnails/color_back_green__buxxfjccqjzm_large_2x-Photoroom 1.png" className="w-full h-full object-contain" alt="thumbnail" />
           </div>
           <div className="flex flex-col gap-[10px]">
             <div className="flex flex-col gap-1">

@@ -1,16 +1,22 @@
-import React from "react";
-import Navbar from "../_components/navbar";
-import SearchBar from "./_components/search-bar";
-import FilterPrice from "./_components/filter-price";
-import FilterStock from "./_components/filter-stock";
-import FilterBrand from "./_components/filter-brands";
-import FilterLocation from "./_components/filter-location";
-import FilterCategories from "./_components/filter-categories";
-import ProductsListing from "./_components/products-listing";
-import { getUser } from "@/lib/auth";
+"use client";
+import React, { useState } from "react";
+import Navbar from "../../_components/navbar";
+import SearchBar from "./search-bar";
+import FilterPrice from "./filter-price";
+import FilterStock from "./filter-stock";
+import FilterBrand from "./filter-brands";
+import FilterLocation from "./filter-location";
+import FilterCategories from "./filter-categories";
+import ProductsListing from "./products-listing";
+import { Session } from "lucia";
+import { User } from "lucia";
 
-export default async function CatalogPage() {
-  const { session, user } = await getUser();
+interface CatalogProps {
+  session: Session | null;
+  user: User | null;
+}
+
+export default function CatalogPage({ session, user }: CatalogProps) {
   return (
     <>
       <header className="bg-white fixed lg:relative lg:top-auto lg:right-auto lg:left-auto lg:pt-[30px] lg:pb-[50px] top-0 right-0 left-0 z-[999999]">
